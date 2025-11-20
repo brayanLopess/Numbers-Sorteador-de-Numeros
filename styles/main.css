@@ -1,0 +1,19 @@
+section {
+
+    & main {
+
+        & small {
+            font: var(--overline);
+
+            background-image: var(--gradient-content);
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            text-transform: uppercase;
+
+            -webkit-text-fill-color: transparent;
+
+            color: #C7C9CC;
+        }
+    }
+}
