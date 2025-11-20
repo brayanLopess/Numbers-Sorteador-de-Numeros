@@ -33,4 +33,34 @@
     --gradient-background: linear-gradient(#D586E0 0%, #91A1FA 98.93%);
     --gradient-content: linear-gradient(#C7C9CC 0%, #3D3D3D 100%);
 
+    /* Fonts*/
+    --ff-sora: "Sora", sans-serif;
+    --ff-rbt-mono: "Roboto Mono", sans-serif;
+    --ff-rbt-flex: "Roboto Flex", sans-serif;
+
+    --display-l: bolder 4.5rem/130% var(--ff-sora);
+    --display-md: bolder 2.5rem/130% var(--ff-sora);
+    --display-sm: bold 2rem/130% var(--ff-sora);
+
+    --overline: bold 1rem/150% var(--ff-rbt-mono);
+
+    --par-l: 500 1rem/150% var(--ff-rbt-flex);
+    --par-md: 500 0.875rem/150% var(--ff-rbt-flex);
+    --par-sm: 500 0.75rem/150% var(--ff-rbt-flex);
+    --label-md: bold 1.25rem/150% var(--ff-rbt-flex);
+    --label-sm: bold 1rem/150% var(--ff-rbt-flex);
+
+}
+
+
+header {
+    display: flex;
+    padding-inline: 7.5rem;
+    padding-block: 4.75rem;
+
+    /* font-family: var(--ff-rbt-flex); */
+
+    & span {
+        text-transform: uppercase;
+    }
 }
