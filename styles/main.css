@@ -74,5 +74,27 @@ section {
 }
 
 aside {
+    max-width: 30.125rem;
+    width: 30.125rem;
+
+    padding-block: 2.125rem;
     padding-left: 6.75rem;
+
+    & div.infoBox {
+        max-width: inherit;
+        width: inherit;
+
+        & h2 {
+            font: bold 1.25rem/150% var(--ff-rbt-flex);
+            text-transform: uppercase;
+            padding-bottom: 0.125rem;
+        }
+
+        & p {
+            font: var(--par-lg);
+            color: var(--content-secondary);
+
+            padding-bottom: 2.5rem;
+        }
+    }
 }
