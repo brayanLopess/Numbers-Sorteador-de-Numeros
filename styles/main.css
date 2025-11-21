@@ -1,6 +1,14 @@
 section {
+    display: flex;
+    justify-self: center;
+    /* align-self: center; */
+
+    max-width: 68.625rem;
+    width: 68.625rem;
 
     & main {
+        max-width: 34.75rem;
+        width: 34.75rem;
 
         & small {
             font: var(--overline);
@@ -13,7 +21,26 @@ section {
 
             -webkit-text-fill-color: transparent;
 
+            padding-bottom: 0.75rem;
+
             color: #C7C9CC;
         }
+
+        & h1 {
+            max-width: inherit;
+            width: inherit;
+
+            display: flex;
+            flex-wrap: nowrap;
+
+            font: var(--display-l);
+            text-transform: uppercase;
+
+            padding-bottom: 2.375rem;
+        }
     }
+}
+
+aside {
+    padding-left: 6.75rem;
 }
