@@ -46,12 +46,21 @@ section {
                 display: flex;
                 flex-wrap: wrap;
 
+                & img {
+                    filter: invert(30%) sepia(80%) saturate(1000%) hue-rotate(200deg) brightness(100%) contrast(100%);
+                }
 
                 & h3 {
+                    font: var(--par-md);
+                    color: var(--content-brand);
+
                     padding-left: 0.5rem;
                 }
 
                 & p {
+                    font: var(--par-sm);
+                    color: var(--content-secondary);
+
                     padding-left: 2rem;
                 }
             }
