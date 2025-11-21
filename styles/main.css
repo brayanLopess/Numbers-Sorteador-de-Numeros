@@ -38,6 +38,29 @@ section {
 
             padding-bottom: 2.375rem;
         }
+
+        & .questions {
+            padding-right: 7.625rem;
+
+            & .questionOne, .questionTwo {
+                display: flex;
+                flex-wrap: wrap;
+
+
+                & h3 {
+                    padding-left: 0.5rem;
+                }
+
+                & p {
+                    padding-left: 2rem;
+                }
+            }
+
+            & .questionTwo {
+                padding-top: 2.25rem;
+            }
+
+        }
     }
 }
 
