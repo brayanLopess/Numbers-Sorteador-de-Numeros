@@ -97,4 +97,37 @@ aside {
             padding-bottom: 2.5rem;
         }
     }
+
+    & div.inputTNumber {
+        display: flex;
+        text-align: center;
+
+        & div:nth-child(2) {
+            padding-inline: 0.75rem;
+        }
+    }
+
+    & h4 {
+        text-transform: uppercase;
+
+        font: var(--label-sm);
+        color: #C7C9CC;
+    }
+
+    & input[type="text"] {
+        max-width: 5.375rem;
+        width: 5.375rem;
+
+        max-height: 3.5rem;
+        height: 3.5rem;
+
+        background-color: var(--background-secondary);
+        
+        border: none;
+        border-radius: 8%;
+
+        color: white;
+        font: var(--display-sm);
+        text-align: center;
+    }
 }
