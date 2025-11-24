@@ -225,4 +225,45 @@ aside {
     padding-left: 0.3rem;
     font: 0.9rem/150% "Inter", sans-serif;
   }
+
+  & .toRaffleNumberButton {
+    max-width: 30.125rem;
+    width: 30.125rem;
+    max-height: 3.5rem;
+    height: 3.5rem;
+
+    padding-top: 2.5rem;
+
+    & button {
+        max-width: inherit;
+        width: inherit;
+        max-height: inherit;
+        height: inherit;
+
+        border: 0;
+        border-radius: 0.5rem;
+
+        &:first-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font: var(--label-sm);
+            color: var(--content-primary);
+            text-transform: uppercase;
+
+            background-color: var(--background-tertiary);
+
+            & img {
+                padding-inline: 0.5rem;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--background-secondary);
+            border: 1px solid var(--gradient-content);
+        }
+    }
+  }
 }
