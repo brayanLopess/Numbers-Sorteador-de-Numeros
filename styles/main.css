@@ -108,20 +108,24 @@ aside {
     }
 
     & div {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: var(--content-brand);
       }
 
       & input {
+
         &:hover {
           cursor: pointer;
         }
 
         &:hover,
         &:focus {
+          outline: 0;
+          border: 1.4px solid var(--content-brand);
           background-color: var(--background-tertiary);
         }
       }
