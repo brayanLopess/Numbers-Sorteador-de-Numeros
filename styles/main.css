@@ -103,12 +103,32 @@ aside {
     display: flex;
     text-align: center;
 
-    & div:nth-child(2) {
+    & span:nth-child(2) {
       padding-inline: 0.75rem;
+    }
+
+    & div {
+        display: flex;
+        flex-direction: column;
+
+      &:hover, &:focus {
+        color: var(--content-brand);
+      }
+
+      & input {
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:hover,
+        &:focus {
+          background-color: var(--background-tertiary);
+        }
+      }
     }
   }
 
-  & h4 {
+  & span {
     text-transform: uppercase;
     padding-bottom: 0.5rem;
 
@@ -131,6 +151,10 @@ aside {
     color: white;
     font: var(--display-sm);
     text-align: center;
+  }
+
+  & .toggleButton {
+    padding-top: 1.25rem;
   }
 
   & label.switch {
@@ -162,7 +186,7 @@ aside {
         content: "";
         height: 0.875rem;
         width: 0.875rem;
-        top: .16rem;
+        top: 0.16rem;
         background-color: white;
         -webkit-transition: 0.4s;
         transition: 0.4s;
@@ -173,7 +197,7 @@ aside {
         border-radius: 1rem;
 
         &:before {
-            border-radius: 50%;
+          border-radius: 50%;
         }
       }
     }
@@ -191,5 +215,10 @@ aside {
       -ms-transform: translateX(0.8rem);
       transform: translateX(0.8rem);
     }
+  }
+
+  & #doNotRepeatNumberText {
+    padding-left: 0.3rem;
+    font: 0.9rem/150% "Inter", sans-serif;
   }
 }
