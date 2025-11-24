@@ -1,133 +1,195 @@
 section {
-    display: flex;
-    justify-self: center;
-    /* align-self: center; */
+  display: flex;
+  justify-self: center;
+  /* align-self: center; */
 
-    max-width: 68.625rem;
-    width: 68.625rem;
+  max-width: 68.625rem;
+  width: 68.625rem;
 
-    & main {
-        max-width: 34.75rem;
-        width: 34.75rem;
+  & main {
+    max-width: 34.75rem;
+    width: 34.75rem;
 
-        & small {
-            font: var(--overline);
+    & small {
+      font: var(--overline);
 
-            background-image: var(--gradient-content);
-            background-clip: text;
-            -webkit-background-clip: text;
+      background-image: var(--gradient-content);
+      background-clip: text;
+      -webkit-background-clip: text;
 
-            text-transform: uppercase;
+      text-transform: uppercase;
 
-            -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
 
-            padding-bottom: 0.75rem;
+      padding-bottom: 0.75rem;
 
-            color: #C7C9CC;
-        }
-
-        & h1 {
-            max-width: inherit;
-            width: inherit;
-
-            display: flex;
-            flex-wrap: nowrap;
-
-            font: var(--display-l);
-            text-transform: uppercase;
-
-            padding-bottom: 2.375rem;
-        }
-
-        & .questions {
-            padding-right: 7.625rem;
-
-            & .questionOne, .questionTwo {
-                display: flex;
-                flex-wrap: wrap;
-
-                & img {
-                    filter: invert(30%) sepia(80%) saturate(1000%) hue-rotate(200deg) brightness(100%) contrast(100%);
-                }
-
-                & h3 {
-                    font: var(--par-md);
-                    color: var(--content-brand);
-
-                    padding-left: 0.5rem;
-                }
-
-                & p {
-                    font: var(--par-sm);
-                    color: var(--content-secondary);
-
-                    padding-left: 2rem;
-                }
-            }
-
-            & .questionTwo {
-                padding-top: 2.25rem;
-            }
-
-        }
+      color: #c7c9cc;
     }
-}
 
-aside {
-    max-width: 30.125rem;
-    width: 30.125rem;
+    & h1 {
+      max-width: inherit;
+      width: inherit;
 
-    padding-block: 2.125rem;
-    padding-left: 6.75rem;
+      display: flex;
+      flex-wrap: nowrap;
 
-    & div.infoBox {
-        max-width: inherit;
-        width: inherit;
+      font: var(--display-l);
+      text-transform: uppercase;
 
-        & h2 {
-            font: bold 1.25rem/150% var(--ff-rbt-flex);
-            text-transform: uppercase;
-            padding-bottom: 0.125rem;
+      padding-bottom: 2.375rem;
+    }
+
+    & .questions {
+      padding-right: 7.625rem;
+
+      & .questionOne,
+      .questionTwo {
+        display: flex;
+        flex-wrap: wrap;
+
+        & img {
+          filter: invert(30%) sepia(80%) saturate(1000%) hue-rotate(200deg)
+            brightness(100%) contrast(100%);
+        }
+
+        & h3 {
+          font: var(--par-md);
+          color: var(--content-brand);
+
+          padding-left: 0.5rem;
         }
 
         & p {
-            font: var(--par-lg);
-            color: var(--content-secondary);
+          font: var(--par-sm);
+          color: var(--content-secondary);
 
-            padding-bottom: 2.5rem;
+          padding-left: 2rem;
         }
+      }
+
+      & .questionTwo {
+        padding-top: 2.25rem;
+      }
+    }
+  }
+}
+
+aside {
+  max-width: 30.125rem;
+  width: 30.125rem;
+
+  padding-block: 2.125rem;
+  padding-left: 6.75rem;
+
+  & div.infoBox {
+    max-width: inherit;
+    width: inherit;
+
+    & h2 {
+      font: bold 1.25rem/150% var(--ff-rbt-flex);
+      text-transform: uppercase;
+      padding-bottom: 0.125rem;
     }
 
-    & div.inputTNumber {
-        display: flex;
-        text-align: center;
+    & p {
+      font: var(--par-lg);
+      color: var(--content-secondary);
 
-        & div:nth-child(2) {
-            padding-inline: 0.75rem;
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  & div.inputTNumber {
+    display: flex;
+    text-align: center;
+
+    & div:nth-child(2) {
+      padding-inline: 0.75rem;
+    }
+  }
+
+  & h4 {
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+
+    font: var(--label-sm);
+    color: #c7c9cc;
+  }
+
+  & input[type="text"] {
+    max-width: 5.375rem;
+    width: 5.375rem;
+
+    max-height: 3.5rem;
+    height: 3.5rem;
+
+    background-color: var(--background-secondary);
+
+    border: none;
+    border-radius: 8%;
+
+    color: white;
+    font: var(--display-sm);
+    text-align: center;
+  }
+
+  & label.switch {
+    position: relative;
+    display: inline-block;
+    width: 1.875rem;
+    height: 1.25rem;
+
+    & input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    & .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 1rem;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 0.875rem;
+        width: 0.875rem;
+        top: .16rem;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      &.round {
+        border-radius: 1rem;
+
+        &:before {
+            border-radius: 50%;
         }
+      }
     }
 
-    & h4 {
-        text-transform: uppercase;
-
-        font: var(--label-sm);
-        color: #C7C9CC;
+    & input:checked + .slider {
+      background: var(--gradient-background);
     }
 
-    & input[type="text"] {
-        max-width: 5.375rem;
-        width: 5.375rem;
-
-        max-height: 3.5rem;
-        height: 3.5rem;
-
-        background-color: var(--background-secondary);
-        
-        border: none;
-        border-radius: 8%;
-
-        color: white;
-        font: var(--display-sm);
-        text-align: center;
+    & input:focus + .slider {
+      box-shadow: 0 0 1px #2196f3;
     }
+
+    & input:checked + .slider:before {
+      -webkit-transform: translateX(0.8rem);
+      -ms-transform: translateX(0.8rem);
+      transform: translateX(0.8rem);
+    }
+  }
 }
