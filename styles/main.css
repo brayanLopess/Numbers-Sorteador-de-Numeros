@@ -117,7 +117,6 @@ aside {
       }
 
       & input {
-
         &:hover {
           cursor: pointer;
         }
@@ -235,35 +234,65 @@ aside {
     padding-top: 2.5rem;
 
     & button {
-        max-width: inherit;
-        width: inherit;
-        max-height: inherit;
-        height: inherit;
+      max-width: inherit;
+      width: inherit;
+      max-height: inherit;
+      height: inherit;
 
-        border: 0;
-        border-radius: 0.5rem;
+      border: 0;
+      border-radius: 0.5rem;
 
-        &:first-child {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row-reverse; /* Tá servindo pra basicamente colocar o ícone de seta para a direita e o texto na esquerda ;) */
 
-            font: var(--label-sm);
-            color: var(--content-primary);
-            text-transform: uppercase;
+      font: var(--label-sm);
+      color: var(--content-primary);
+      text-transform: uppercase;
 
-            background-color: var(--background-tertiary);
+      background: var(--background-tertiary);
 
-            & img {
-                padding-inline: 0.5rem;
-            }
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-radius: inherit;
+        inset: 2px;
+        background: var(--background-tertiary);
+      }
+
+      &::after {
+        content: attr(aria-label);
+        z-index: 1;
+      }
+
+      & img {
+        padding-inline: 0.5rem;
+        z-index: 1;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: var(--gradient-border);
+
+        &::before {
+          content: "";
+          border-radius: inherit;
+          inset: 2px;
+          background: var(--background-secondary);
         }
 
-        &:hover {
-            cursor: pointer;
-            background-color: var(--background-secondary);
-            border: 1px solid var(--gradient-content);
+        &::after {
+          content: attr(aria-label);
+          z-index: 1;
         }
+      }
+
+      &.raffleAgain {
+        display: none;
+      }
     }
   }
 }
