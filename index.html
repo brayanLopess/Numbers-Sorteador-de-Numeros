@@ -60,7 +60,7 @@
       </main>
 
       <aside>
-        <div class="infoBox">
+        <div class="infoBox invisible">
           <h2>Quero sortear:</h2>
           <p>
             defina o intervalo e a quantidade de números, clique em "Sortear" e
@@ -68,29 +68,22 @@
           </p>
         </div>
 
-        <div class="inputTNumber">
-          <span>
+        <div class="inputTNumber invisible">
+          <span class="invisible">
             <div>
-              <!-- Depois TENTAR fazer com que o texto(número) mude de cor quando estiver :focus -->
               Número
-              <input
-                type="text"
-                name="numbers"
-                placeholder="2"
-                id=""
-              />
-              </div>
-            </label>
+              <input type="text" name="numbers" placeholder="2" id="" />
+            </div>
           </span>
 
-          <span>
+          <span class="invisible">
             <div>
               De
               <input type="text" placeholder="1" name="" id="" />
             </div>
           </span>
 
-          <span>
+          <span class="invisible">
             <div>
               De
               <input type="text" placeholder="100" name="" id="" />
@@ -98,7 +91,7 @@
           </span>
         </div>
 
-        <div class="toggleButton">
+        <div class="toggleButton invisible">
           <label class="switch">
             <input type="checkbox" name="" id="" />
             <span class="slider round"></span>
@@ -106,18 +99,31 @@
           <span id="doNotRepeatNumberText">Não repetir número</span>
         </div>
 
-        <div class="toRaffleNumberButton">
-          <!-- Depois fazer a macaquice de deixar a borda com linear-gradient -->
+        <div class="toRaffleNumberButton invisible">
           <button class="toRaffleNumberEnable" aria-label="Sortear">
-            <!-- Sortear -->
-            <img src="./assets/icons/arrow.png" alt="Seta para direita">
+            <img src="./assets/icons/arrow.png" alt="Seta para direita" />
           </button>
-          
+        </div>
 
-          <button class="invisible raffleAgain">
-            Sortear novamente
-            <img src="./assets/icons/reload.png" alt="Ícone de recarregar">
-          </button>
+        <div class="resultBox">
+          <h1>Resultado do sorteio</h1>
+          <small>1<small>ºresultado</small></small>
+
+          <div class="numbers">
+            <div>
+              <span id="firstNumber">23</span>
+            </div>
+
+            <div>
+              <span id="secondNumber">12</span>
+            </div>
+          </div>
+
+          <div class="toRaffleNumberButton raffleAgain">
+            <button aria-label="Sortear novamente">
+              <img src="./assets/icons/reload.png" alt="Ícone de reload">
+            </button>
+          </div>
         </div>
       </aside>
     </section>
