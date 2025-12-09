@@ -1,9 +1,14 @@
 aside {
+  display: flex;
+  flex-direction: column;
+
   max-width: 30.125rem;
   width: 30.125rem;
 
-  padding-block: 2.125rem;
-  padding-left: 6.75rem;
+  max-height: 34rem;
+  height: 34rem;
+
+  padding-left: 8.75rem;
 
   & div.infoBox {
     max-width: inherit;
@@ -282,6 +287,20 @@ aside {
           font: bold 3rem/150% var(--ff-rbt-mono);
         }
       }
+    }
+  }
+}
+
+@media (max-width: 25rem) {
+  aside {
+    max-width: 19.9375rem;
+    width: 19.9375rem;
+
+    margin-inline: 2.1875rem;
+
+    & .toRaffleNumberButton {
+      max-width: 19.9375rem;
+      width: 19.9375rem;
     }
   }
 }

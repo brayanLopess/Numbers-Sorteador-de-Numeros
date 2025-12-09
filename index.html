@@ -27,105 +27,115 @@
     </header>
 
     <section>
+      <small>Online - Gratuito</small>
       <main>
-        <small>Online - Gratuito</small>
-        <h1>Sorteador de números</h1>
+        <div class="divider">
+          <div class="asideSeparator">
+            <h1>Sorteador de números</h1>
+            
+            <div class="questions">
+              <div class="questionOne">
+                <div class="imgPerson">
+                  <img
+                    src="./assets/icons/person.png"
+                    alt="Pessoa com dúvida"
+                  />
+                </div>
 
-        <div class="questions">
-          <div class="questionOne">
-            <div class="imgPerson">
-              <img src="./assets/icons/person.png" alt="Pessoa com dúvida" />
+                <h3>Como funciona o sorteador de números?</h3>
+                <p>
+                  O sorteador utiliza um algoritmo de geração aleatória para
+                  criar números dentro do intervalo especificado pelo usuário.
+                </p>
+              </div>
+
+              <div class="questionTwo">
+                <div class="imgPerson">
+                  <img
+                    src="./assets/icons/person.png"
+                    alt="Pessoa com dúvida"
+                  />
+                </div>
+
+                <h3>Posso escolher o intervalo dos números?</h3>
+
+                <p>
+                  Sim, você pode definir os valores mínimo e máximo para o
+                  intervalo dos números sorteados.
+                </p>
+              </div>
             </div>
-
-            <h3>Como funciona o sorteador de números?</h3>
-            <p>
-              O sorteador utiliza um algoritmo de geração aleatória para criar
-              números dentro do intervalo especificado pelo usuário.
-            </p>
           </div>
 
-          <div class="questionTwo">
-            <div class="imgPerson">
-              <img src="./assets/icons/person.png" alt="Pessoa com dúvida" />
+          <aside>
+            <div class="infoBox">
+              <h2>Quero sortear:</h2>
+              <p>
+                defina o intervalo e a quantidade de números, clique em
+                "Sortear" e veja os resultados na tela. É rápido e fácil!
+              </p>
             </div>
 
-            <h3>Posso escolher o intervalo dos números?</h3>
+            <div class="inputTNumber">
+              <span class="">
+                <div>
+                  Número
+                  <input type="text" name="numbers" placeholder="2" id="" />
+                </div>
+              </span>
 
-            <p>
-              Sim, você pode definir os valores mínimo e máximo para o intervalo
-              dos números sorteados.
-            </p>
-          </div>
+              <span class="">
+                <div>
+                  De
+                  <input type="text" placeholder="1" name="" id="" />
+                </div>
+              </span>
+
+              <span class="">
+                <div>
+                  De
+                  <input type="text" placeholder="100" name="" id="" />
+                </div>
+              </span>
+            </div>
+
+            <div class="toggleButton">
+              <label class="switch">
+                <input type="checkbox" name="" id="" />
+                <span class="slider round"></span>
+              </label>
+              <span id="doNotRepeatNumberText">Não repetir número</span>
+            </div>
+
+            <div class="toRaffleNumberButton">
+              <button class="toRaffleNumerEnable" aria-label="Sortear">
+                <img src="./assets/icons/arrow.png" alt="Seta para direita" />
+              </button>
+            </div>
+
+            <div class="resultBox invisible">
+              <h1 class="invisible">Resultado do sorteio</h1>
+              <small class="invisible">1<small>ºresultado</small></small>
+
+              <div class="numbers invisible">
+                <div class="invisible">
+                  <span id="firstNumber">23</span>
+                </div>
+
+                <div class="invisible">
+                  <span id="secondNumber">12</span>
+                </div>
+              </div>
+
+              <div class="toRaffleNumberButton raffleAgain invisible">
+                <button class="invisible" aria-label="Sortear novamente">
+                  <img src="./assets/icons/reload.png" alt="Ícone de reload" />
+                </button>
+              </div>
+            </div>
+          </aside>
         </div>
       </main>
-
-      <aside>
-        <div class="infoBox">
-          <h2>Quero sortear:</h2>
-          <p>
-            defina o intervalo e a quantidade de números, clique em "Sortear" e
-            veja os resultados na tela. É rápido e fácil!
-          </p>
-        </div>
-
-        <div class="inputTNumber">
-          <span class="">
-            <div>
-              Número
-              <input type="text" name="numbers" placeholder="2" id="" />
-            </div>
-          </span>
-
-          <span class="">
-            <div>
-              De
-              <input type="text" placeholder="1" name="" id="" />
-            </div>
-          </span>
-
-          <span class="">
-            <div>
-              De
-              <input type="text" placeholder="100" name="" id="" />
-            </div>
-          </span>
-        </div>
-
-        <div class="toggleButton">
-          <label class="switch">
-            <input type="checkbox" name="" id="" />
-            <span class="slider round"></span>
-          </label>
-          <span id="doNotRepeatNumberText">Não repetir número</span>
-        </div>
-
-        <div class="toRaffleNumberButton">
-          <button class="toRaffleNumberEnable" aria-label="Sortear">
-            <img src="./assets/icons/arrow.png" alt="Seta para direita" />
-          </button>
-        </div>
-
-        <div class="resultBox invisible">
-          <h1 class="invisible">Resultado do sorteio</h1>
-          <small class="invisible">1<small>ºresultado</small></small>
-
-          <div class="numbers invisible">
-            <div class="invisible">
-              <span id="firstNumber">23</span>
-            </div>
-
-            <div class="invisible">
-              <span id="secondNumber">12</span>
-            </div>
-          </div>
-
-          <div class="toRaffleNumberButton raffleAgain invisible">
-            <button class="invisible" aria-label="Sortear novamente">
-              <img src="./assets/icons/reload.png" alt="Ícone de reload">
-            </button>
-          </div>
-        </div>
-      </aside>
     </section>
   </body>
 </html>
