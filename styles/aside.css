@@ -5,8 +5,8 @@ aside {
   max-width: 30.125rem;
   width: 30.125rem;
 
-  max-height: 34rem;
-  height: 34rem;
+  max-height: 14rem;
+  height: 14rem;
 
   padding-left: 8.75rem;
 
@@ -293,10 +293,11 @@ aside {
 
 @media (max-width: 25rem) {
   aside {
-    max-width: 19.9375rem;
-    width: 19.9375rem;
+    max-width: 20.5rem;
+    width: 20.5rem;
 
-    margin-inline: 2.1875rem;
+    padding: 0;
+    margin-top: 2.625rem;
 
     & .toRaffleNumberButton {
       max-width: 19.9375rem;

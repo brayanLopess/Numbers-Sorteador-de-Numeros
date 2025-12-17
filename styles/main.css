@@ -47,20 +47,11 @@ section {
 
     & .divider {
       display: flex;
-
-      & .asideSeparator {
-        height: 24rem;
-        display: flex;
-        justify-content: start;
-        align-content: center;
-        flex-wrap: wrap;
-      }
+      flex-wrap: wrap;
 
       & .questions {
         display: flex;
         flex-direction: column;
-        justify-self: flex-start;
-        align-self: flex-start;
 
         max-width: 34.75rem;
         width: 34.75rem;
@@ -106,18 +97,45 @@ section {
     max-width: 25rem;
     width: 25rem;
 
+    & small {
+      padding-inline: 2.1875rem;
+    }
+
     & main {
       max-width: inherit;
       width: inherit;
       padding-inline: 2.1875rem;
 
-      & h1 {
-        font: var(--display-md);
-      }
+      & div.divider {
+        & h1 {
+          max-width: 20rem;
+          width: 20rem;
+          height: 7rem;
 
-      & .questions {
-        padding: 0;
-        margin-top: 25rem;
+          font: var(--display-md);
+        }
+
+        & div.questions {
+          display: flex;
+          flex-direction: column;
+
+          margin-top: 13rem;
+
+          & .questionOne,
+          .questionTwo {
+            display: flex;
+            flex-wrap: wrap;
+
+            & h3 {
+              max-width: 19.9375rem;
+              width: 19.9375rem;
+            }
+
+            & p {
+              width: 19.9375rem;
+            }
+          }
+        }
       }
     }
   }
