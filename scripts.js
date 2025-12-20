@@ -3,7 +3,20 @@ const number = document.getElementById("number")
 const numberFrom = document.getElementById("numberFrom")
 const numberTo = document.getElementById("numberTo")
 
-// Pegando o valor dos elementos que o usuário digitou
-const numberValue = number.value
-const numberFromValue = numberFrom.value
-const numberToValue = numberTo.value
+// Regex
+const hasCharactersRegex = /\D/g
+
+number.oninput = () => {
+    const numberValue = number.value.replace(hasCharactersRegex, "")
+    number.value = numberValue
+}
+
+numberFrom.oninput = () => {
+    const numberValue = numberFrom.value.replace(hasCharactersRegex, "")
+    numberFrom.value = numberValue
+}
+
+numberTo.oninput = () => {
+    const numberValue = numberTo.value.replace(hasCharactersRegex, "")
+    numberTo.value = numberValue
+}
