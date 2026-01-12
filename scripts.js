@@ -25,17 +25,16 @@ numberTo.oninput = () => {
 }
 
 function toRaffle() {
-    
-    let numberValue = number.value
+    let numberValue = Number(number.value)
     let numberFromValue = Number(numberFrom.value)
     let numberToValue = Number(numberTo.value)
 
-    console.log(typeof numberValue)
-
-    const numRaffled = Math.floor(Math.random() * (numberToValue - numberFromValue) + numberFromValue)
-    console.log(numRaffled)
+    for(numberCount = 0; numberCount < numberValue; numberCount++) {
+        const numRaffled = Math.floor(Math.random() * (numberToValue - numberFromValue) + numberFromValue)
+        console.log(numRaffled)
+    }
 }
 
-raffleNumberButton.onclick = () => {
+raffleNumberButton.onclick = (numberValue, hasNumberRegex) => {
     toRaffle()
 }
