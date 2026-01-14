@@ -3,6 +3,9 @@ const number = document.getElementById("number")
 const numberFrom = document.getElementById("numberFrom")
 const numberTo = document.getElementById("numberTo")
 
+// Botão de checkbox
+const toggleButton = document.getElementById("toggleButton")
+
 // Botão Sortear
 const raffleNumberButton = document.getElementById("botaoSortear")
 
@@ -29,12 +32,19 @@ function toRaffle() {
     let numberFromValue = Number(numberFrom.value)
     let numberToValue = Number(numberTo.value)
 
+    let results = []
     for(numberCount = 0; numberCount < numberValue; numberCount++) {
-        const numRaffled = Math.floor(Math.random() * (numberToValue - numberFromValue) + numberFromValue)
-        console.log(numRaffled)
+        let numRaffled = Math.floor(Math.random() * (numberToValue - numberFromValue) + numberFromValue)
+        let valueOfNum = Number(numRaffled.valueOf())
+        if(!results.includes(numRaffled)) {
+            results.push(numRaffled.valueOf())
+        } else {
+            results.push(Math.floor(Math.random() * (numberToValue - numberFromValue !== valueOfNum) + numberFromValue + valueOfNum))
+        }
     }
+    console.log(results)
 }
 
-raffleNumberButton.onclick = (numberValue, hasNumberRegex) => {
+raffleNumberButton.onclick = () => {
     toRaffle()
 }
