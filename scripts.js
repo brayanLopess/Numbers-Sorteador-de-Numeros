@@ -3,9 +3,6 @@ const number = document.getElementById("number");
 const numberFrom = document.getElementById("numberFrom");
 const numberTo = document.getElementById("numberTo");
 
-// Botão de checkbox
-const toggleButton = document.getElementById("toggleButton");
-
 // Botão Sortear
 const raffleNumberButton = document.getElementById("botaoSortear");
 
@@ -32,6 +29,9 @@ function toRaffle() {
   let numberFromValue = Number(numberFrom.value);
   let numberToValue = Number(numberTo.value);
 
+  // Botão de checkbox
+  const toggleButton = document.getElementById("toggleButton");
+
   let results = [];
   if (numberValue && numberFromValue && numberToValue !== null) {
     if (numberToValue > numberFromValue) {
@@ -40,16 +40,27 @@ function toRaffle() {
           Math.random() * (numberToValue - numberFromValue) + numberFromValue,
         );
         let valueOfNum = Number(numRaffled.valueOf());
-        if (!results.includes(numRaffled)) {
-          results.push(numRaffled.valueOf());
+
+        if(toggleButton.checked) {
+          console.log("Está ativo!")
         } else {
-          results.push(
+          console.log("Não está ativo!")
+        }
+
+        if(toggleButton.checked) {
+           if(!results.includes(numRaffled)) {
+            results.push(numRaffled.valueOf())
+          } else {
+            results.push(
             Math.floor(
               Math.random() * (numberToValue - numberFromValue !== valueOfNum) +
                 numberFromValue +
                 valueOfNum,
             ),
           );
+          }
+        } else {
+          results.push(numRaffled.valueOf())
         }
       }
     } else {
