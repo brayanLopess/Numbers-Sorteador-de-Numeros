@@ -44,11 +44,13 @@
 
     --overline: bold 1rem/150% var(--ff-rbt-mono);
 
+    --x-btn: 400 0.9375rem/150% var(--ff-rbt-flex);
     --par-lg: 500 1rem/150% var(--ff-rbt-flex);
     --par-md: 500 0.875rem/150% var(--ff-rbt-flex);
     --par-sm: 500 0.75rem/150% var(--ff-rbt-flex);
     --label-md: bold 1.25rem/150% var(--ff-rbt-flex);
     --label-sm: bold 1rem/150% var(--ff-rbt-flex);
+    --infoBox-msg: 500 0.790rem/150% var(--ff-rbt-flex);
 
 }
 
@@ -77,4 +79,9 @@ header {
 
 .invisible {
     display: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
 }

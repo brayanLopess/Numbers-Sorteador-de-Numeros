@@ -3,6 +3,13 @@ const number = document.getElementById("number");
 const numberFrom = document.getElementById("numberFrom");
 const numberTo = document.getElementById("numberTo");
 
+// Error/Success info box
+const errorText = document.querySelector("#errorText")
+const errorInfoBox = document.querySelector("#errorInfoBox")
+const closeErrorInfo = document.querySelector("#closeErrorInfo")
+const successInfoBox = document.querySelector("#successInfoBox")
+const closeSuccessInfo = document.querySelector("#closeSuccessInfo")
+
 // Botão Sortear
 const raffleNumberButton = document.getElementById("botaoSortear");
 
@@ -24,6 +31,16 @@ numberTo.oninput = () => {
   numberTo.value = numberValue;
 };
 
+closeErrorInfo.addEventListener("click", () => {
+  errorInfoBox.classList.remove("flex")
+  errorInfoBox.classList.add("invisible")
+})
+
+closeSuccessInfo.addEventListener("click", () => {
+  successInfoBox.classList.remove("flex")
+  successInfoBox.classList.add("invisible")
+})
+
 function toRaffle() {
   let numberValue = Number(number.value);
   let numberFromValue = Number(numberFrom.value);
@@ -42,13 +59,7 @@ function toRaffle() {
         let valueOfNum = Number(numRaffled.valueOf());
 
         if(toggleButton.checked) {
-          console.log("Está ativo!")
-        } else {
-          console.log("Não está ativo!")
-        }
-
-        if(toggleButton.checked) {
-           if(!results.includes(numRaffled)) {
+          if(!results.includes(numRaffled)) {
             results.push(numRaffled.valueOf())
           } else {
             results.push(
@@ -57,19 +68,37 @@ function toRaffle() {
                 numberFromValue +
                 valueOfNum,
             ),
-          );
+          )
           }
         } else {
           results.push(numRaffled.valueOf())
         }
+        
+        successInfoBox.classList.remove("invisible")
+        successInfoBox.classList.add("flex")
+        setTimeout(() => {
+          successInfoBox.classList.add("invisible")
+          successInfoBox.classList.remove("flex")
+        }, "10000")
       }
     } else {
-         alert(
-      "Não foi possível realizar o sorteio pois o máximo NÃO é maior que o mínimo. Por favor, insira um número máximo maior que o mínimo e tente novamente.",
-    );
+        errorInfoBox.classList.remove("invisible")
+        errorInfoBox.classList.add("flex")
+        errorText.textContent = "O valor inserido como máximo NÃO é maior que o valor mínimo, por favor insira um valor maior para o sorteio poder ser realizado."
+
+        setTimeout(() => {
+          errorInfoBox.classList.add("invisible")
+          errorInfoBox.classList.remove("flex")
+          errorText.textContent = "Verifique se todos os campos estão preenchidos e tente novamente."
+        }, "10000")
+
+        if(closeErrorInfo.addEventListener("click", () => {
+          errorText.textContent = "Verifique se todos os campos estão preenchidos e tente novamente."
+        })) {}
     }
   } else {
-    alert("Não foi possível realizar o sorteio pois não tem nenhum valor ou está faltando colocar um número. Por favor, insira os números corretamente e tente novamente.")
+    errorInfoBox.classList.remove("invisible")
+    errorInfoBox.classList.add("flex")
   }
   console.log(results);
 }
