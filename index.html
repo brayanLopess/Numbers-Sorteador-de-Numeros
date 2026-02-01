@@ -33,7 +33,7 @@
           <h1>Sorteador de números</h1>
 
           <aside>
-            <div class="infoBox">
+            <div class="infoBox" id="raffleInfoBox">
               <h2>Quero sortear:</h2>
               <p>
                 defina o intervalo e a quantidade de números, clique em
@@ -41,7 +41,7 @@
               </p>
             </div>
 
-            <div class="inputTNumber">
+            <div id="inputTNumberBox" class="inputTNumber">
               <span class="">
                 <div>
                   Número
@@ -78,22 +78,22 @@
               </button>
             </div>
 
-            <div class="resultBox invisible">
-              <h1 class="invisible">Resultado do sorteio</h1>
-              <small class="invisible">1<small>ºresultado</small></small>
+            <div class="resultBox invisible" id="resultBox">
+              <h1 id="resultText" class="invisible">Resultado do sorteio</h1>
+              <small id="resultNumber" class="invisible">1<small>ºresultado</small></small>
 
-              <div class="numbers invisible">
-                <div class="invisible">
+              <div id="resultNumbersBox" class="numbers invisible">
+                <div id="numberBox" class="invisible">
                   <span id="firstNumber">23</span>
                 </div>
 
-                <div class="invisible">
+                <div id="scndNumberBox" class="invisible">
                   <span id="secondNumber">12</span>
                 </div>
               </div>
 
-              <div class="toRaffleNumberButton raffleAgain invisible">
-                <button class="invisible" aria-label="Sortear novamente">
+              <div class="toRaffleNumberButton raffleAgain invisible" id="raffleAgainBox">
+                <button id="raffleAgainButton" class="invisible" aria-label="Sortear novamente">
                   <img src="./assets/icons/reload.png" alt="Ícone de reload" />
                 </button>
               </div>
