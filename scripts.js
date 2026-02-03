@@ -139,18 +139,20 @@ function toRaffle() {
         numberBox.classList.remove("invisible");
         scndNumberBox.classList.remove("invisible");
 
-        for (let i = 2; i < results.length; i++) {
+        for (let i = 0; i < results.length; i++) {
           firstNumber.textContent = results[0];
           secondNumber.textContent = results[1];
 
-          newDiv = document.createElement("div");
-          newSpan = document.createElement("span");
-          newDiv.id = "newDiv";
-          newSpan.id = "newSpan";
+          if(i >= 2) {
+            newDiv = document.createElement("div");
+            newSpan = document.createElement("span");
+            newDiv.id = "newDiv";
+            newSpan.id = "newSpan";
 
-          newNumbersBox.append(newDiv);
-          newDiv.append(newSpan);
-          newSpan.textContent = results[i];
+            newNumbersBox.append(newDiv);
+            newDiv.append(newSpan);
+            newSpan.textContent = results[i];
+          }
         }
 
         // Setting time out to show the button "Raffle Again" only when the animation of the number stops.
