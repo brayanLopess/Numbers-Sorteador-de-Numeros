@@ -31,7 +31,7 @@ const numberBox = document.getElementById("numberBox");
 const firstNumber = document.getElementById("firstNumber");
 const scndNumberBox = document.getElementById("scndNumberBox");
 const secondNumber = document.getElementById("secondNumber");
-const newNumbersBox = document.getElementById("newNumbersBox")
+const newNumbersBox = document.getElementById("newNumbersBox");
 const raffleAgainBox = document.getElementById("raffleAgainBox");
 const raffleAgainButton = document.getElementById("raffleAgainButton");
 
@@ -184,7 +184,6 @@ function toRaffle() {
     errorInfoBox.classList.remove("invisible");
     errorInfoBox.classList.add("flex");
   }
-  console.log(results);
 }
 
 function raffleAgain() {
@@ -196,6 +195,8 @@ function raffleAgain() {
   resultNumbersBox.classList.add("invisible");
   numberBox.classList.add("invisible");
   scndNumberBox.classList.add("invisible");
+  raffleAgainBox.classList.add("invisible")
+  raffleAgainButton.classList.add("invisible")
 
   // Showing the inputs to the user for raffle again
   raffleInfoBox.classList.remove("invisible");
@@ -215,9 +216,9 @@ raffleNumberButton.onclick = () => {
 };
 
 raffleAgainButton.onclick = () => {
-  if(newNumbersBox.contains(newDiv)){
-    while(newNumbersBox.contains(newDiv)) {
-      newNumbersBox.replaceChildren()
+  if (newNumbersBox.contains(newDiv)) {
+    while (newNumbersBox.contains(newDiv)) {
+      newNumbersBox.replaceChildren();
     }
   }
 
