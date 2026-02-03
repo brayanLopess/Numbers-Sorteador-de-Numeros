@@ -29,7 +29,6 @@ aside {
   }
 
   & div.inputTNumber {
-    display: flex;
     text-align: center;
 
     & span:nth-child(2) {
@@ -219,14 +218,13 @@ aside {
         }
       }
 
-      &.raffleAgain {
-        display: none;
+      & .raffleAgain {
+        animation: displayNone 5s linear forwards;
       }
     }
   }
 
   & .resultBox {
-    display: flex;
     flex-direction: column;
     justify-content: right;
 
@@ -237,6 +235,11 @@ aside {
     height: 18.375rem;
 
     & h1 {
+      display: flex;
+      justify-content: center;
+
+      padding-bottom: 0.25rem;
+
       font: var(--label-md);
       color: var(--content-primary);
 
@@ -258,7 +261,7 @@ aside {
 
       margin-block: 2.5rem;
 
-      & div:first-child {
+      & div {
         border-radius: 28px;
         background-color: var(--content-brand);
         color: black;
@@ -282,7 +285,8 @@ aside {
         justify-content: center;
         align-content: center;
 
-        & span {
+        & span,
+        p {
           color: var(--content-brand);
           font: bold 3rem/150% var(--ff-rbt-mono);
         }
@@ -310,61 +314,73 @@ aside {
   0% {
     background-color: var(--content-brand);
     transform: rotate(0deg);
+    margin-inline: 0;
   }
 
   5% {
     background-color: var(--content-brand);
     transform: rotate(18deg);
+    margin-inline: 0.3125rem;
   }
 
   15% {
     background-color: var(--content-brand);
     transform: rotate(36deg);
+    margin-inline: 0.3125rem;
   }
 
   25% {
     background-color: var(--content-brand);
     transform: rotate(-54deg);
+    margin-inline: 0.3125rem;
   }
 
   35% {
     background-color: var(--content-brand);
     transform: rotate(-72deg);
+    margin-inline: 0.3125rem;
   }
 
   45% {
     background-color: var(--content-brand);
     transform: rotate(0deg);
+    margin-inline: 0.3125rem;
   }
 
   55% {
     background-color: var(--content-brand);
     transform: rotate(108deg);
+    margin-inline: 0.3125rem;
   }
 
   65% {
     background-color: var(--content-brand);
     transform: rotate(126deg);
+    margin-inline: 0.3125rem;
   }
 
   75% {
     background-color: var(--content-brand);
     transform: rotate(-144deg);
+    margin-inline: 0.3125rem;
   }
 
   85% {
     background-color: var(--content-brand);
     transform: rotate(-162deg);
+    margin-inline: 0.3125rem;
   }
 
   95% {
     background-color: var(--content-brand);
     transform: rotate(180deg);
+    margin-inline: 0.3125rem;
   }
 
   100% {
     background-color: transparent;
     transform: rotate(0deg);
+    margin-inline: 0;
   }
 }
 
@@ -403,5 +419,15 @@ aside {
 
   100% {
     color: var(--content-brand);
+  }
+}
+
+@keyframes displayNone {
+  0% {
+    display: none;
+  }
+
+  100% {
+    display: flex;
   }
 }
