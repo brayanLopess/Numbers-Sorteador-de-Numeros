@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,7 +45,12 @@
               <span class="">
                 <div>
                   Número
-                  <input type="text" name="numbers" placeholder="2" id="number" />
+                  <input
+                    type="text"
+                    name="numbers"
+                    placeholder="2"
+                    id="number"
+                  />
                 </div>
               </span>
 
@@ -66,7 +71,7 @@
 
             <div class="toggleButton" id="toggleButtonBox">
               <label class="switch">
-                <input type="checkbox" name="" id="toggleButton"/>
+                <input type="checkbox" name="" id="toggleButton" />
                 <span class="slider round"></span>
               </label>
               <span id="doNotRepeatNumberText">Não repetir número</span>
@@ -79,21 +84,36 @@
             </div>
 
             <div class="resultBox invisible" id="resultBox">
-              <h1 id="resultText" class="invisible flex">Resultado do sorteio</h1>
-              <small id="resultNumber" class="invisible">1<small>ºresultado</small></small>
+              <h1 id="resultText" class="invisible flex">
+                Resultado do sorteio
+              </h1>
+              <small id="resultNumber" class="invisible"
+                >1<small>ºresultado</small></small
+              >
 
-              <div id="resultNumbersBox" class="numbers invisible">
-                <div id="numberBox" class="invisible">
-                  <span id="firstNumber">23</span>
+              <div id="resultNumbersDiv" class="flex">
+                <div id="resultNumbersBox" class="numbers invisible">
+                  <div id="numberBox" class="invisible">
+                    <span id="firstNumber">23</span>
+                  </div>
+
+                  <div id="scndNumberBox" class="invisible">
+                    <span id="secondNumber">12</span>
+                  </div>
                 </div>
 
-                <div id="scndNumberBox" class="invisible">
-                  <span id="secondNumber">12</span>
-                </div>
+                <div id="newNumbersBox" class="numbers flex"></div>
               </div>
 
-              <div class="toRaffleNumberButton raffleAgain invisible" id="raffleAgainBox">
-                <button id="raffleAgainButton" class="invisible" aria-label="Sortear novamente">
+              <div
+                class="toRaffleNumberButton raffleAgain invisible"
+                id="raffleAgainBox"
+              >
+                <button
+                  id="raffleAgainButton"
+                  class="invisible"
+                  aria-label="Sortear novamente"
+                >
                   <img src="./assets/icons/reload.png" alt="Ícone de reload" />
                 </button>
               </div>
@@ -131,7 +151,9 @@
 
       <footer>
         <div id="errorInfoBox" class="invisible">
-          <p id="errorText">Verifique se todos os campos estão preenchidos e tente novamente.</p>
+          <p id="errorText">
+            Verifique se todos os campos estão preenchidos e tente novamente.
+          </p>
           <button id="closeErrorInfo">X</button>
         </div>
 

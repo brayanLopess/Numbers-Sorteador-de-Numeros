@@ -31,8 +31,12 @@ const numberBox = document.getElementById("numberBox");
 const firstNumber = document.getElementById("firstNumber");
 const scndNumberBox = document.getElementById("scndNumberBox");
 const secondNumber = document.getElementById("secondNumber");
+const newNumbersBox = document.getElementById("newNumbersBox")
 const raffleAgainBox = document.getElementById("raffleAgainBox");
 const raffleAgainButton = document.getElementById("raffleAgainButton");
+
+let newDiv = "";
+let newSpan = "";
 
 // Regex
 const hasCharactersRegex = /\D/g;
@@ -93,13 +97,22 @@ function toRaffle() {
             Math.random() * (numberToValue - numberFromValue) + numberFromValue,
           );
           let valueOfNum = Number(numRaffled.valueOf());
-          let calcAgain = Math.floor(Math.random() * (numberToValue - numberFromValue !== valueOfNum) + numberFromValue + valueOfNum)
+          let calcAgain = Math.floor(
+            Math.random() * (numberToValue - numberFromValue !== valueOfNum) +
+              numberFromValue +
+              valueOfNum,
+          );
 
-          if(toggleButton.checked){
-              while(results.includes(numRaffled)) {
-                numRaffled = Math.floor(Math.random() * (numberToValue - numberFromValue) + numberFromValue)
-              }
-              results.push(numRaffled)
+          if (toggleButton.checked) {
+            while (results.includes(numRaffled)) {
+              numRaffled = Math.floor(
+                Math.random() * (numberToValue - numberFromValue) +
+                  numberFromValue,
+              );
+            }
+            results.push(numRaffled);
+          } else {
+            results.push(numRaffled);
           }
 
           successInfoBox.classList.remove("invisible");
@@ -125,6 +138,20 @@ function toRaffle() {
         resultNumbersBox.classList.remove("invisible");
         numberBox.classList.remove("invisible");
         scndNumberBox.classList.remove("invisible");
+
+        for (let i = 2; i < results.length; i++) {
+          firstNumber.textContent = results[0];
+          secondNumber.textContent = results[1];
+
+          newDiv = document.createElement("div");
+          newSpan = document.createElement("span");
+          newDiv.id = "newDiv";
+          newSpan.id = "newSpan";
+
+          newNumbersBox.append(newDiv);
+          newDiv.append(newSpan);
+          newSpan.textContent = results[i];
+        }
 
         // Setting time out to show the button "Raffle Again" only when the animation of the number stops.
         setTimeout(() => {
@@ -170,7 +197,12 @@ function raffleAgain() {
   numberBox.classList.add("invisible");
   scndNumberBox.classList.add("invisible");
 
-  // Showing
+  // Showing the inputs to the user for raffle again
+  raffleInfoBox.classList.remove("invisible");
+  inputTNumberBox.classList.add("flex");
+  inputTNumberBox.classList.remove("invisible");
+  toggleButtonBox.classList.remove("invisible");
+  botaoSortear.classList.remove("invisible");
 }
 
 raffleNumberButton.onclick = () => {
@@ -183,5 +215,11 @@ raffleNumberButton.onclick = () => {
 };
 
 raffleAgainButton.onclick = () => {
-  toRaffle();
+  if(newNumbersBox.contains(newDiv)){
+    while(newNumbersBox.contains(newDiv)) {
+      newNumbersBox.replaceChildren()
+    }
+  }
+
+  raffleAgain();
 };
